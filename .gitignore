@@ -1,0 +1,14 @@
+*.pyc
+bin
+build
+include
+local
+man
+share
+Scripts
+.Python
+*~
+*.sqlite3
+.DS_Store
+.env
+static
