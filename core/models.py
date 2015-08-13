@@ -8,5 +8,5 @@ class Event(models.Model):
     from_day = models.DateTimeField(_('De'))
     to_day = models.DateTimeField(_('To'))
     local = models.CharField(_('Local'), max_length=200)
-    address = models.CharField(_('Endereço'), max_length=200)
+    address = models.CharField(_(u'Endereço'), max_length=200)
     price = models.CharField(_(u'Preço'), max_length=20)
