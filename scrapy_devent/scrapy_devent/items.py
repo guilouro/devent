@@ -6,9 +6,7 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from core.models import Event
 
-
-class ScrapyDeventItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class EventItem(scrapy.Item):
+    django_model = Event

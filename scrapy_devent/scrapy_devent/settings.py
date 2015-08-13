@@ -9,6 +9,13 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
+
+import os
+import sys
+
+sys.path.append(os.path.abspath('../../'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'devent.settings'
+
 BOT_NAME = 'scrapy_devent'
 
 SPIDER_MODULES = ['scrapy_devent.spiders']
@@ -61,9 +68,9 @@ NEWSPIDER_MODULE = 'scrapy_devent.spiders'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scrapy_devent.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'scrapy_devent.pipelines.ScrapyDeventPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
