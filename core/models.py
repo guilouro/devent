@@ -10,3 +10,6 @@ class Event(models.Model):
     local = models.CharField(_('Local'), max_length=200)
     address = models.CharField(_(u'Endereço'), max_length=200)
     price = models.CharField(_(u'Preço'), max_length=20)
+
+    def __unicode__(self):
+        return self.title
