@@ -12,3 +12,4 @@ Scripts
 .DS_Store
 .env
 static
+.sass-cache
