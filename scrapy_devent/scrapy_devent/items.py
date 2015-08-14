@@ -7,6 +7,7 @@
 
 import scrapy
 from core.models import Event
+from scrapy_djangoitem import DjangoItem
 
-class EventItem(scrapy.Item):
+class EventItem(DjangoItem):
     django_model = Event

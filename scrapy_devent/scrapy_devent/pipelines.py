@@ -8,5 +8,6 @@
 
 class ScrapyDeventPipeline(object):
     def process_item(self, item, spider):
-        item.save()
+        # item.save()
+        print item
         return item
