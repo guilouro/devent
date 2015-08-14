@@ -1,6 +1,10 @@
+# coding: utf-8
 from django.shortcuts import render
+from core.models import Event
+from datetime import datetime, timedelta
 
 
-# Create your views here.
 def home(request):
-    return render(request, 'core/index.html')
+    events = Event.objects.filter(
+        start_date__gt=datetime.now() - timedelta(hours=5))
+    return render(request, 'core/index.html', {'events': events})

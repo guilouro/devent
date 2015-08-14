@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h2>App is running... \o/</h2>
+    {% for event in events %}
+        <article class="item" style="background-image({{ event.image }})">
+
+        </article>
+    {% endfor %}
 {% endblock content %}
