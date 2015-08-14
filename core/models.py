@@ -9,8 +9,7 @@ class Event(models.Model):
     image = models.URLField(_(u'Imagem'), null=True, max_length=250)
     start_date = models.DateTimeField(_(u'Começa em:'), null=True)
     local = models.CharField(_('Local'), max_length=200)
-    address = models.CharField(_(u'Endereço'), max_length=200)
-    price = models.CharField(_(u'Preço'), max_length=20)
+    price = models.CharField(_(u'Preço'), max_length=20, null=True)
 
     def __unicode__(self):
         return self.title
