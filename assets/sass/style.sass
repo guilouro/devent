@@ -1,0 +1,36 @@
+@import 'jeet/jeet'
+@import 'normalize'
+@import 'variables'
+@import 'card'
+
+header
+    width: 100%
+    height: 100vh
+    position: relative
+    text-align: center
+    background: url(../img/bg.jpg) center center no-repeat
+    color: #fff
+    margin-bottom: 50px
+    h1
+        font-size: 5rem
+        margin: 0
+        padding: 0
+    h2
+        font-size: 2rem
+        margin: 10px 0
+
+    .brand
+        @include j-align(both)
+
+
+
+footer, section
+    @include j-cf()
+    width: 100%
+
+section
+    @include j-center(95%)
+
+footer
+    padding: 40px 0
+    text-align: center

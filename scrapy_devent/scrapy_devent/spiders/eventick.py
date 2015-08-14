@@ -6,8 +6,10 @@ from scrapy_devent.items import EventItem
 
 
 class EventickSpider(scrapy.Spider):
-    tags = ['developer', 'python', 'developer',
-            'frontend', 'front-end', 'hackathon']
+    tags = [
+        'developer', 'python', 'developer', 'frontend', 'front-end',
+        'hackathon', 'php', 'javascript', 'node'
+    ]
     name = 'eventick'
     hostname = 'https://www.eventick.com.br'
     start_urls = [

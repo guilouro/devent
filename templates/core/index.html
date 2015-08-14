@@ -1,9 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% for event in events %}
-        <article class="item" style="background-image({{ event.image }})">
 
-        </article>
+
+    {% for event in events %}
+    <div class="mdl-card mdl-shadow--2dp card-event">
+        <div class="mdl-card__title mdl-card--expand">
+            <h4>
+                {{ event.title }}<br>
+                <small>{{ event.local }}</small>
+            </h4>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a href="{{ event.url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank">
+                Ir para evento
+            </a>
+            <div class="mdl-layout-spacer"></div>
+            <span class="date">{{ event.start_date|date:'d/m' }}</span> <i class="material-icons">event</i>
+        </div>
+    </div>
     {% endfor %}
+
 {% endblock content %}
