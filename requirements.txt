@@ -3,3 +3,4 @@ dj-database-url==0.3.0
 model-mommy
 scrapy-djangoitem
 django==1.7
+python-dateutil
