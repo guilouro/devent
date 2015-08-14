@@ -4,3 +4,4 @@ model-mommy
 scrapy-djangoitem
 django==1.7
 python-dateutil
+pytz
