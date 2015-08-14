@@ -4,6 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class Event(models.Model):
+    url = models.URLField(_(u'Url'), null=True)
     title = models.CharField(_(u'Título'), max_length=200)
     from_day = models.DateTimeField(_('De'))
     to_day = models.DateTimeField(_('To'))
