@@ -41,4 +41,6 @@ class EventickSpider(scrapy.Spider):
         event['image'] = response.meta['image']
         event['local'] = response.meta['local']
         event['start_date'] = parser.parse(response.meta['start_date'])
+        event['price'] = response.xpath(
+            '(//td[@class="total"])[last()]').extract_first()
         yield event
