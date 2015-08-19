@@ -1,7 +1,7 @@
 Unipath==1.0
 dj-database-url==0.3.0
 model-mommy
-scrapy
+Scrapy==1.0.3
 scrapy-djangoitem
 django==1.7
 python-dateutil
