@@ -5,3 +5,5 @@ scrapy-djangoitem
 django==1.7
 python-dateutil
 pytz
+django-celery
+django-redis
