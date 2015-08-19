@@ -13,3 +13,4 @@ Scripts
 .env
 static
 .sass-cache
+*/settings_local.py
