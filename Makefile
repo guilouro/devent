@@ -1,5 +1,5 @@
 sass:
-	sass --watch static/sass/style.sass:static/css/style.css --style compressed
+	sass --watch assets/sass/style.sass:assets/css/style.css --style compressed
 
 clean:
 	@find . -iname '*.pyc' -delete
