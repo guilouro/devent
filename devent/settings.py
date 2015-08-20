@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from unipath import Path
 from dj_database_url import parse
+import os
 
 BASE_DIR = Path(__file__).parent
 
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).parent
 SECRET_KEY = '7)7xkv(dxuucmdd942nazo7m1%d&wae@d1rka!bm4hew3h%tj7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = DEBUG = os.environ.get('DEBUG', False)
 
 TEMPLATE_DEBUG = DEBUG
 
