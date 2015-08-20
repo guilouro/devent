@@ -10,6 +10,7 @@ class Event(models.Model):
     start_date = models.DateTimeField(_(u'Começa em:'), null=True)
     local = models.CharField(_('Local'), max_length=200)
     price = models.CharField(_(u'Preço'), max_length=20, null=True)
+    created_at = models.DateTimeField(_('Criado em:'), auto_now_add=True)
 
     def __unicode__(self):
         return self.title
