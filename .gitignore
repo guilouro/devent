@@ -11,6 +11,5 @@ Scripts
 *.sqlite3
 .DS_Store
 .env
-static
 .sass-cache
 */settings_local.py

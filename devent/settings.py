@@ -85,9 +85,9 @@ TEMPLATE_DIRS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATICFILES_DIRS = (
-    BASE_DIR.parent.child('static'),
-)
+# STATICFILES_DIRS = (
+#     BASE_DIR.parent.child('static'),
+# )
 
 STATIC_ROOT = BASE_DIR.parent.child('staticfiles')
 STATIC_URL = '/static/'
