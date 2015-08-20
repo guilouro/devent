@@ -1,4 +1,4 @@
-requests[security]
+cffi
 Unipath==1.0
 dj-database-url==0.3.0
 model-mommy
