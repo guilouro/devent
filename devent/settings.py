@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).parent
 SECRET_KEY = '7)7xkv(dxuucmdd942nazo7m1%d&wae@d1rka!bm4hew3h%tj7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG = os.environ.get('DEBUG', False)
+DEBUG = os.environ.get('DEBUG', False)
 
 TEMPLATE_DEBUG = DEBUG
 
