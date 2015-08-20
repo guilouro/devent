@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from unipath import Path
-from dj_database_url import parse
+from dj_database_url import parse, config as djconfig
 import os
 
 BASE_DIR = Path(__file__).parent
@@ -61,7 +61,7 @@ WSGI_APPLICATION = 'devent.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
-    'default': parse('sqlite:///' + BASE_DIR.child('db.sqlite3'))
+    'default': djconfig()
 }
 
 # Internationalization
