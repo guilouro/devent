@@ -89,7 +89,7 @@ STATICFILES_DIRS = (
     BASE_DIR.parent.child('assets'),
 )
 
-STATIC_ROOT = BASE_DIR.parent.child('static')
+STATIC_ROOT = BASE_DIR.parent.child('staticfiles')
 STATIC_URL = '/static/'
 
 
