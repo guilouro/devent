@@ -2,23 +2,42 @@
  * BREAKPOINTS
  *********************/
 
-@mixin breakpoint($point)
-    @if $point == desktop
-        @media (min-width: 70em)
-            @content
+$mobile: 37.5em
+$tablet: 50em
+$laptop: 64em
+$desktop: 70em
 
-    @else if $point == laptop
-        @media (min-width: 64em)
-            @content
+@mixin breakpoint($point, $tam: min)
+    @if $tam == middle
+        @if $point == desktop
+            @media (min-width: $laptop) and (max-width: $desktop)
+                @content
 
-    @else if $point == tablet
-        @media (min-width: 50em)
-            @content
+        @else if $point == laptop
+            @media (min-width: $tablet) and (max-width: $laptop)
+                @content
 
-    @else if $point == phablet
-        @media (min-width: 37.5em)
-            @content
+        @else if $point == tablet
+            @media (min-width: $mobile) and (max-width: $tablet)
+                @content
 
-    @else if $point == mobileonly
-        @media (max-width: 37.5em)
-            @content
+    @else
+        @if $point == desktop
+            @media (#{$tam}-width: $desktop)
+                @content
+
+        @else if $point == laptop
+            @media (#{$tam}-width: $laptop)
+                @content
+
+        @else if $point == tablet
+            @media (#{$tam}-width: $tablet)
+                @content
+
+        @else if $point == phablet
+            @media (#{$tam}-width: $phablet)
+                @content
+
+        @else if $point == mobileonly
+            @media (max-width: $mobile)
+                @content

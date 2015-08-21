@@ -1,8 +1,32 @@
 .card-event.mdl-card
-    +j-column(1/4, $cycle: 4, $gutter: 2)
     margin-bottom: 20px
     height: 256px
     background: #3E4EB8
+
+    +j-column(1/4, $cycle: 4, $gutter: 2)
+
+    +breakpoint(mobileonly)
+        +j-column(1/1, $cycle: 1, $gutter: 2)
+
+    +breakpoint(tablet, middle)
+        +j-column(1/2, $cycle: 2, $gutter: 2)
+
+
+
+    // +breakpoint(phablet, max)
+    //     +j-column(1/2, $cycle: 2, $gutter: 2)
+
+    // +breakpoint(laptop)
+
+    // +breakpoint(laptop, max)
+    //     +j-column(1/3, $cycle: 3, $gutter: 2)
+
+
+
+
+
+
+
 
 .card-event > .mdl-card__actions
     border-color: rgba(255, 255, 255, 0.2)
