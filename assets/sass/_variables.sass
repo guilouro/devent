@@ -9,15 +9,15 @@ $desktop: 70em
 
 @mixin breakpoint($point, $tam: min)
     @if $tam == middle
-        @if $point == desktop
+        @if $point == laptop
             @media (min-width: $laptop) and (max-width: $desktop)
                 @content
 
-        @else if $point == laptop
+        @else if $point == tablet
             @media (min-width: $tablet) and (max-width: $laptop)
                 @content
 
-        @else if $point == tablet
+        @else if $point == mobile
             @media (min-width: $mobile) and (max-width: $tablet)
                 @content
 
@@ -38,6 +38,6 @@ $desktop: 70em
             @media (#{$tam}-width: $phablet)
                 @content
 
-        @else if $point == mobileonly
+        @else if $point == mobile
             @media (max-width: $mobile)
                 @content

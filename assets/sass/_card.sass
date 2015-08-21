@@ -5,27 +5,14 @@
 
     +j-column(1/4, $cycle: 4, $gutter: 2)
 
-    +breakpoint(mobileonly)
+    +breakpoint(mobile)
         +j-column(1/1, $cycle: 1, $gutter: 2)
 
-    +breakpoint(tablet, middle)
+    +breakpoint(mobile, middle)
         +j-column(1/2, $cycle: 2, $gutter: 2)
 
-
-
-    // +breakpoint(phablet, max)
-    //     +j-column(1/2, $cycle: 2, $gutter: 2)
-
-    // +breakpoint(laptop)
-
-    // +breakpoint(laptop, max)
-    //     +j-column(1/3, $cycle: 3, $gutter: 2)
-
-
-
-
-
-
+    +breakpoint(desktop, max)
+        +j-column(1/3, $cycle: 3, $gutter: 2)
 
 
 .card-event > .mdl-card__actions
