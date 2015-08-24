@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 from unipath import Path
 from dj_database_url import parse, config as djconfig
 import os
+import sys
 
 BASE_DIR = Path(__file__).parent
 
@@ -23,6 +24,9 @@ SECRET_KEY = '7)7xkv(dxuucmdd942nazo7m1%d&wae@d1rka!bm4hew3h%tj7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
+
+sys.path.append("%s/scrapy_devent" % BASE_DIR.parent)
+os.environ['SCRAPY_SETTINGS_MODULE'] = 'scrapy_devent.settings'
 
 TEMPLATE_DEBUG = DEBUG
 
