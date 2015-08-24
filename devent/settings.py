@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # Apps #
+    'djcelery',
     'core',
 )
 
@@ -63,6 +64,24 @@ WSGI_APPLICATION = 'devent.wsgi.application'
 DATABASES = {
     'default': djconfig()
 }
+
+
+BROKER_URL = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+
+
+from datetime import timedelta
+
+CELERYBEAT_SCHEDULE = {
+    'update_events': {
+        'task': 'core.tasks.crawl',
+        'schedule': timedelta(seconds=40)
+    }
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
