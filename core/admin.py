@@ -7,7 +7,7 @@ from core.models import Event
 class EventAdmin(admin.ModelAdmin):
 
     items = (
-        'title', 'local', 'price', 'start_date',
+        'title', 'local', 'price', 'start_date', 'created_at',
     )
 
     list_display = items
