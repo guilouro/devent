@@ -83,7 +83,7 @@ from datetime import timedelta
 CELERYBEAT_SCHEDULE = {
     'update_events': {
         'task': 'core.tasks.crawl',
-        'schedule': timedelta(minutes=1)
+        'schedule': timedelta(hours=1)
     }
 }
 
