@@ -8,3 +8,6 @@ clean:
 migrate:
 	python manage.py makemigrations
 	python manage.py migrate
+
+crawl:
+	cd scrapy_devent/scrapy_devent && scrapy list | xargs -n 1 scrapy crawl
