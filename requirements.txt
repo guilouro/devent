@@ -1,16 +1,4 @@
+--requirement=requirements_dev.txt
 cffi
-Unipath==1.0
-dj-database-url==0.3.0
-dj-static==0.0.6
-model-mommy
-git+git://github.com/scrapy/scrapy.git
-scrapy-djangoitem
-django==1.7
-python-dateutil
-pytz
-django-celery
-django-redis
 gunicorn==18.0
 psycopg2==2.5.3
-celery
-redis
