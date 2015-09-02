@@ -11,6 +11,11 @@
                 <small>{{ event.local }}</small>
             </h4>
         </div>
+        {% if event.price %}
+            <div class="mdl-card__price">
+                {{ event.price }}
+            </div>
+        {% endif %}
         <div class="mdl-card__actions mdl-card--border">
             <a href="{{ event.url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank">
                 Ir para evento
