@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/guilouro/devent.svg?branch=master)](https://travis-ci.org/guilouro/devent)
+
 Devent
 =======
 Projeto hospedado em [http://devent.herokuapp.com](http://devent.herokuapp.com) feito para estudo de integração do Django + Celery + Scrapy.
