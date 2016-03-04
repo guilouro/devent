@@ -1,14 +1,16 @@
 language: python
-
 python:
-  - "2.7"
-
+- '2.7'
 env:
-  - DJANGO_VERSION=1.7
-
+- DJANGO_VERSION=1.7
 install:
-  - pip install -r requirements.txt
-
+- pip install -r requirements.txt
 script:
-  - python manage.py test --settings=devent.settings_test
-
+- python manage.py test --settings=devent.settings_test
+deploy:
+  provider: heroku
+  api_key:
+    secure: bJ5JEMSXdOzhxuPIjH40YspLOn2/acLZK1aCGoH3h6IZgVByhH+6/+p2i7S26w21jL3YIdbhr2JYwm4TrT/bKytXxgoT8zLPBEHikXY1M87eI3co72wvmbJWx+Nmch8rpWTmz+QsuQhyr+/YWXiQ3NvOqqmEU6Jup/JBEWdIF5mnRcSn4DHcrVsB/wOApw20dxLdfv9OngMwVZTBsCWbC5QvtD7rob2VGaVjghgpsnaNtqgLhk6Gekijg5FSetzWZkvXlT4wSbc30HyvyscZ35g8nzVty1mr778UniVtmONVwzI+LJGz2OyTVZM9NkzExErDMp0n3i27fmUZdWxEPRpIF0bL7rtn/BuRzeEoTGCPnp4TJEDN6Z5JQWHFhv8bnGl0PnJ6u5Iu2/vQWyvPFIJH0b9H9cXbHKZqZI88dTouzYjAvG6m0YC/GNAv010nP6TZp60nEtQCRdv6hoy4J+KbkC9b1/S9OhdGzGW59HSTX/SxHpxX5zLctjqSBigqvr4SWnvgZr7lrxbeD4R6iaQkicNR6u+fPbDiQAABe1P81Zuo0LZLcmcM6EJe6MpDzP48IJYW1bqKL7iDlyjkBvKhEb/MpFS7Pr3aJEGtOUziHQqGPFHiZRudbxQYXuLBZKkjcmdzTiL0Glg3aqXaNsKlrxil5MjEo9KXDkiOwo0=
+  app: devent
+  on:
+    repo: guilouro/devent
