@@ -4,7 +4,7 @@ dj-static==0.0.6
 model-mommy
 Scrapy==1.0.5
 scrapy-djangoitem
-django==1.7
+django==2.2.24
 python-dateutil
 pytz
 django-celery
