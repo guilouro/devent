@@ -2,7 +2,7 @@ Unipath==1.0
 dj-database-url==0.3.0
 dj-static==0.0.6
 model-mommy
-Scrapy==1.0.5
+Scrapy==2.6.1
 scrapy-djangoitem
 django==1.7
 python-dateutil
